@@ -15,12 +15,7 @@
 
 
 /* per la griglia 10 x 10  */
-.grid_ten{
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.square_ten{
-    width: 100px;
-    height: 100px;
+.my_square_ten{
+    width: calc(100% / 10);
+    height: 132px;
 }

@@ -1,19 +1,15 @@
 
-// <!-- CONSEGNA  -->
-
-// <!-- L'utente clicca su un bottone che genererà una griglia di gioco quadrata.
-// Ogni cella ha un numero progressivo, da 1 a 100.
-// Ci saranno quindi 10 caselle per ognuna delle 10 righe.
-// Quando l'utente clicca su ogni cella,
-// la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata. -->
-
-
-
-
 // prelevo il bottone 
 const buttonElement = document.querySelector("#generateBtn");
 // prelevo la tabella 
 const gridElement = document.querySelector("#grid");
+
+let tableGenerated = false;
+
+
+
+
+
 
 
 
@@ -21,17 +17,19 @@ const gridElement = document.querySelector("#grid");
 // al click genero la tabella 
 buttonElement.addEventListener("click", 
     function(){
+        gridElement.innerHTML = "";
+        
+
 
         // per le 100 
         const gridNumber = getRandomNumbersArray(100);
-        // al click aggiungo anche una classe alla griglia 
-        gridElement.classList.add("grid_ten");
 
 
         for (let i = 0; i < 100; i++) {
+
             // creo un elemento con la classe my_square
             const newSquare = document.createElement("div");
-            newSquare.classList.add("my_square" , "square_ten");
+            newSquare.classList.add("my_square", "my_square_ten");
 
             // gli inserisco il numero da 1 a 100 
             newSquare.innerText = gridNumber[i];
@@ -47,16 +45,24 @@ buttonElement.addEventListener("click",
 
                 }
             )
-
-
+                
             // lo inserisco nella griglia 
             gridElement.append(newSquare);
-
-
-
-
+         
         }
+
     }
+
+
+
+
+
+
+
+
+
+
+
 )
 
 
