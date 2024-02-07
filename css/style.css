@@ -3,8 +3,24 @@
     align-items: center;
     justify-content: center;
 
+    border: 1px solid black;
+}
+
+.active_square{
+    background-color: #D2E0FB;
+}
+
+
+
+
+
+/* per la griglia 10 x 10  */
+.grid_ten{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.square_ten{
     width: 100px;
     height: 100px;
-
-    border: 1px solid black;
 }
