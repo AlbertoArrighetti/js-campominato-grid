@@ -10,18 +10,28 @@
     <!-- link a style  -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body class="my_color">
 
-    <div class="container">
+    <div class="container mb-5 ">
 
         <div class="d-flex justify-content-between align-items-center">
             <!-- titolo  -->
-            <h1 class="my-5 ">
+            <h1 class="my-5 fw-bold">
                 Campo Minato 
             </h1>
 
-            <!-- bottone  -->
-            <input id="generateBtn" class="btn btn-primary" type="button" value="Genera">
+            <div class="d-flex gap-5">
+
+                <select class="form-select" id="mySelect" aria-label="Default select example">
+                    <option selected>Seleziona una difficoltà</option>
+                    <option value="1">Difficoltà 1</option>
+                    <option value="2">Difficoltà 2</option>
+                    <option value="3">Difficoltà 3</option>
+                </select>
+                
+                <!-- bottone  -->
+                <input id="generateBtn" class="btn btn-dark" type="button" value="Gioca">
+            </div>
         </div>
 
         
