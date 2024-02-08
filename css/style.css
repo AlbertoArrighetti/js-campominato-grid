@@ -21,26 +21,66 @@
 }
 
 
+.my_grid{
+    max-width: 1000px;
+    height: 1000px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+}
 
 
 
 
+
+/* ------------------------------------------------------------ */
+/* GRANDEZZE GRIGLIA  */
 
 /* per la griglia 10 x 10  */
-.my_square_ten{
+#grid.easy .my_square {
     width: calc(100% / 10);
-    height: 132px;
+    height: calc(100% / 10);
 }
 
-/* per la griglia 9 x 9  */
-.my_square_nine{
+#grid.medium .my_square {
     width: calc(100% / 9);
-    height: 146px;
+    height: calc(100% / 9);
+}
+
+#grid.hard .my_square {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
 }
 
 
-/* per la griglia 7 x 7  */
-.my_square_seven{
-    width: calc(100% / 7);
-    height: 189px;
+
+
+
+
+
+
+
+/* QUERY */
+/* imposto la grandezza in base allo schermo */
+@media screen and (max-width: 992px) {
+    .my_grid{
+        max-width: 800px;
+        height: 800px;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 768px) {
+    .my_grid{
+        max-width: 600px;
+        height: 600px;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 576px) {
+    .my_grid{
+        max-width: 400px;
+        height: 400px;
+        margin: 0 auto;
+    }
 }
